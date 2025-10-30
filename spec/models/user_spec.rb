@@ -21,11 +21,6 @@ RSpec.describe User, type: :model do
     expect(user2).not_to be_valid
   end
 
-  it "fails intentionally just to test CI" do
-    expect(1 + 1).to eq(3)
-  end
-
-
   it "validates password cannot be nil" do
     user = build(:user, password: nil)
     expect(user).not_to be_valid
